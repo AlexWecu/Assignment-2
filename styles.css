@@ -1,0 +1,86 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
+
+
+h1, h2, h3, p {
+    font-family: 'Inter', sans-serif;
+    color: black;
+    margin: 0;
+}
+
+h1 {
+    font-size: calc(4vw + 4vh);
+    text-align: center;
+    /* margin-top: 130px; */
+    position: relative;
+    top: 15vh;
+}
+
+h2 {
+    font-size: calc(2vw + 2vh);
+    text-align: center;
+    /* margin-top: 76px; */
+    font-weight: lighter;
+    display: inline-block;
+    
+    
+}
+
+button {
+    font-size: calc(1.5vw + 1.5vh);
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 3px solid black;
+    padding: 2vh 4vw;
+    border-radius: 50px;
+    margin-top: 25vh;
+    margin-bottom: 5vh;
+    font-weight: lighter;
+    display: inline-block;
+    transition: all 0.2s ease-out 0s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+
+}
+
+p {
+    font-size: calc(1vw + 1vh);
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+.dateBorder {
+    height: 9vh;
+    width: 20vw;
+    border: 0.2vw solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 40%;
+    margin-top: 20vh;
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}

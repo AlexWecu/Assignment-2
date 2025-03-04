@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ridiculous Input</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Date of Birth</h1>
+    <h2 class=dateBorder id="date">mm - dd</h2>
+    <p>hint: try clicking the screen</p>
+    <div class="buttoncontainer"><button id="confirmButton">CONFIRM</button></div>
+
+    <div id="popup" class="popup">
+        <h2 id="popupDate"></h2>
+    </div>
+    
+    <script>
+        let monthName = "";
+        let dayNumber = "";
+
+        document.body.addEventListener('click', function(event) {
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+
+            let month = Math.ceil((event.clientY / height) * 12);
+            let day = Math.ceil((event.clientX / width) * 31);
+
+            const monthRandom = ["9", "12", "6", "5", "10", "3", 
+            "11", "8", "1", "4", "7", "2"];
+
+            monthRandomNumber = monthRandom[month - 1];
+
+            const dayRandom = ["3", "2", "21", "18", "13", "20", "23", "29", "26", "14", "15", "1", "30", "25", 
+            "22", "19", "17", "27", "9", "11", "4", "5", "31", "16", "8", "12", "10", "7", "24", "6", "28"];
+
+            dayRandomNumber = dayRandom[day - 1];
+
+            document.getElementById('date').innerText = monthRandomNumber + " - " + dayRandomNumber;
+            alert
+
+
+
+            const monthNames = ["January", "February", "March", "April", "May", "June", 
+            "July", "August", "September", "October", "November", "December"];
+
+            monthName = monthNames[month - 1];
+            dayNumber = day;
+        });
+
+        document.getElementById('confirmButton').addEventListener('click', () => {
+            document.getElementById('popupDate').innerText = "Your Birthday is : " + monthName + " " + dayNumber;
+            document.getElementById('popup').style.display = 'flex';
+        });
+
+        document.getElementById('popup').addEventListener('click', () => {
+            document.getElementById('popup').style.display = 'none';
+        });
+    </script>
+
+    
+    
+</body>
+
+</html>
